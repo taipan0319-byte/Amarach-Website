@@ -77,7 +77,8 @@ def shell(title, description, body, current, depth=1):
       <ul>
         <li><a href="{TEL}">{PHONE}</a></li>
         <li><a href="mailto:dave@amarach.net">dave@amarach.net</a></li>
-        <li>[[SERVICE_AREA]]</li>
+        <li>On-site: the Rockford region and northern Illinois</li>
+        <li>Remote: anywhere</li>
       </ul>
     </div>
     <div>
@@ -197,9 +198,10 @@ SERVICES = [
      ["Intermittent faults and mystery noises", "Slow performance, found and fixed",
       "Printing, email, and connectivity", "Second opinions before you spend money"]),
     ("Support, on-site and remote",
-     "Routine help for staff, one-off emergencies, and standing arrangements.",
+     "Routine help for staff, one-off emergencies, and standing arrangements. Think of the remote side as telemedicine for your network: most problems are diagnosed and fixed without anyone waiting for a visit.",
      ["Remote sessions for most issues, usually within the hour",
-      "On-site visits when it needs hands — Rockford is a short drive",
+      "On-site visits when it needs hands — the Rockford region and northern Illinois",
+      "Fully remote care of workstations and servers for clients beyond driving distance",
       "Standing maintenance arrangements for offices that would rather not think about it"]),
 ]
 
@@ -343,7 +345,7 @@ def build_contact():
         <a class="contact-phone" href="{TEL}">{PHONE}</a>
         <ul class="contact-facts">
           <li><span class="meta">Email</span><a href="mailto:dave@amarach.net">dave@amarach.net</a></li>
-          <li><span class="meta">Service area</span>[[SERVICE_AREA]]</li>
+          <li><span class="meta">Service area</span>On-site across the Rockford region and northern Illinois. Remote support and managed care of computers and servers — anywhere.</li>
           <li><span class="meta">Hours</span>[[HOURS]]</li>
         </ul>
       </div>
