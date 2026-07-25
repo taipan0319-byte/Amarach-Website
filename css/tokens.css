@@ -1,0 +1,65 @@
+/* Amárach Net Solutions — design tokens */
+
+@font-face {
+  font-family: "IBM Plex Serif";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/plex-serif-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/plex-sans-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/plex-sans-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/plex-mono-400.woff2") format("woff2");
+}
+
+:root {
+  /* color */
+  --ink:   #14181F;
+  --navy:  #1B2A4A;
+  --blue:  #3D6E9E;
+  --shirt: #C9DCEF;
+  --paper: #FFFFFF;
+  --band:  #F4F2EE;
+  --rule:  #DBD9D4;
+  --seal:  #2F6F4E;
+
+  /* type */
+  --serif: "IBM Plex Serif", Georgia, serif;
+  --sans:  "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+  --mono:  "IBM Plex Mono", "Consolas", monospace;
+
+  --fs-h1: clamp(2rem, 5.2vw, 2.75rem);   /* 44 */
+  --fs-h2: clamp(1.5rem, 3.4vw, 2rem);    /* 32 */
+  --fs-h3: 1.5rem;                        /* 24 */
+  --fs-body: 1.125rem;                    /* 18 */
+  --fs-small: 0.9375rem;                  /* 15 */
+  --fs-meta: 0.8125rem;                   /* 13 */
+
+  /* layout */
+  --max: 1120px;
+  --measure: 68ch;
+  --section: 96px;
+  --radius: 4px;
+  --shadow: 0 1px 3px rgba(20, 24, 31, 0.08);
+}
+
+@media (max-width: 700px) {
+  :root { --section: 56px; }
+}
