@@ -86,7 +86,7 @@ def shell(title, description, body, current, depth=1):
     <div>
       <ul>
         <li><a href="{TEL}">{PHONE}</a></li>
-        <li><a href="mailto:davidjp@amarach.net">davidjp@amarach.net</a></li>
+        <li><a href="mailto:davidjpl@amarach.net">davidjpl@amarach.net</a></li>
         <li>On-site: the Rockford region and northern Illinois</li>
         <li>Remote: anywhere</li>
       </ul>
@@ -205,7 +205,7 @@ SERVICES = [
      "Practice management, imaging, ERP, and other field-specific systems: installed, updated, and made to work with the rest of your network.",
      ["Installation and version upgrades", "Vendor coordination. We sit on hold so you don't have to",
       "Integration with your network, printers, and backups",
-      "Dental, medical, professional, and industrial systems"]),
+      "Dental, medical, manufacturing, retail, and professional systems"]),
     ("Diagnosis and troubleshooting",
      "Figuring out what is actually wrong. Twenty-nine years of pattern recognition.",
      ["Intermittent faults and mystery noises", "Slow performance, found and fixed",
@@ -329,7 +329,7 @@ def build_about():
         <p>Amárach Net Solutions was founded by David Lickteig in 1997, and has been serving Rockford-area businesses ever since. The model hasn't changed in twenty-nine years: senior-level work, direct relationships, and networks the firm knows well because it built them.</p>
         <p>Dave is a Microsoft Certified Professional. Before founding Amárach, he served as Assistant Network Administrator for the City of Rockford at the Rockford Public Library, and before computers, spent eleven years in industrial sales calling on manufacturers across Winnebago County. It's a useful background for explaining a server to someone who doesn't want to hear about a server. He studied at Iowa State University.</p>
         <h2>How we work</h2>
-        <p>Clients range from one-person shops to companies with more than a hundred employees: dental and medical offices, professional firms, manufacturers, nonprofits. Some have been with the firm for decades. Most are within an hour of Rockford; some are further out and work with us entirely remotely.</p>
+        <p>Clients range from one-person shops to companies with more than a hundred employees: dental and medical offices, professional firms, manufacturers, retailers, nonprofits. Some have been with the firm for decades. Most are within an hour of Rockford; some are further out and work with us entirely remotely.</p>
         <p>There's no ticket queue and no tier-one script. The person working on your network is the one who set it up, knows its history, and remembers what was done last time. That continuity is the product.</p>
         <p><a href="/contact/">Get in touch &rarr;</a></p>
       </div>
@@ -357,7 +357,7 @@ def build_contact():
       <div>
         <a class="contact-phone" href="{TEL}">{PHONE}</a>
         <ul class="contact-facts">
-          <li><span class="meta">Email</span><a href="mailto:davidjp@amarach.net">davidjp@amarach.net</a></li>
+          <li><span class="meta">Email</span><a href="mailto:davidjpl@amarach.net">davidjpl@amarach.net</a></li>
           <li><span class="meta">Service area</span>On-site across the Rockford region and northern Illinois. Remote support and managed care of computers and servers, anywhere.</li>
           <li><span class="meta">Hours</span>[[HOURS]]</li>
         </ul>
