@@ -391,3 +391,7 @@ input:focus, textarea:focus { outline: 2px solid var(--blue); outline-offset: 1p
 
 /* closing band logo */
 .closing-logo { height: 140px; width: auto; margin-bottom: 32px; }
+
+/* big brand mark at the very bottom of the footer */
+.footer-biglogo { margin-top: 56px; }
+.footer-biglogo img { width: min(720px, 92%); height: auto; }

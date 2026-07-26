@@ -104,6 +104,9 @@ def shell(title, description, body, current, depth=1):
   <div class="wrap footer-meta">
     <p>Founded by David JP Lickteig, Microsoft Certified Professional &middot; Rockford, Illinois</p>
   </div>
+  <div class="wrap footer-biglogo">
+    <img src="/brand/logo-horizontal-reversed.svg" alt="" aria-hidden="true" width="760" height="200">
+  </div>
 </footer>
 
 </body>
