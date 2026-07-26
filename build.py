@@ -25,13 +25,19 @@ NAV = [
 
 
 def shell(title, description, body, current, depth=1):
-    prefix = "../" * depth
+    # Relative URLs so the site works at a domain root AND under a
+    # subpath (GitHub Pages project sites serve from /<repo>/).
+    prefix = "../" * depth if depth else "./"
     current_attr = ' aria-current="page"'
     nav_items = "\n        ".join(
         f'<li><a href="{href}"{current_attr if href == current else ""}>{label}</a></li>'
         for href, label in NAV
     )
-    return f"""<!DOCTYPE html>
+    def relativize(html):
+        return (html.replace('href="/', f'href="{prefix}')
+                    .replace('src="/', f'src="{prefix}')
+                    .replace('srcset="/', f'srcset="{prefix}'))
+    return relativize(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -98,7 +104,7 @@ def shell(title, description, body, current, depth=1):
 
 </body>
 </html>
-"""
+""")
 
 
 def parse_article(path):
