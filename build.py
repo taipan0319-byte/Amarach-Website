@@ -18,7 +18,7 @@ NAV = [
     ("/", "Home"),
     ("/services/", "Services"),
     ("/dave-perfect/", "Dave Perfect"),
-    ("/knowledge/", "Knowledge"),
+    ("/knowledge/", "Knowledge Base"),
     ("/about/", "About"),
     ("/contact/", "Contact"),
 ]
@@ -49,7 +49,7 @@ def shell(title, description, body, current, depth=1):
 
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="/" aria-label="Amárach Net Solutions — home">
+    <a class="logo" href="/" aria-label="Amárach Net Solutions home">
       <img src="/brand/logo-horizontal.svg" alt="Amárach Net Solutions" width="760" height="200">
     </a>
     <nav class="site-nav" aria-label="Main">
@@ -68,7 +68,7 @@ def shell(title, description, body, current, depth=1):
 <footer class="site-footer">
   <div class="wrap">
     <div>
-      <a class="logo" href="/" aria-label="Amárach Net Solutions — home">
+      <a class="logo" href="/" aria-label="Amárach Net Solutions home">
         <img src="/brand/logo-horizontal-reversed.svg" alt="Amárach Net Solutions" width="760" height="200">
       </a>
       <p class="tagline">Serving the Rock River Valley since 1997.</p>
@@ -85,7 +85,7 @@ def shell(title, description, body, current, depth=1):
       <ul>
         <li><a href="/services/">Services</a></li>
         <li><a href="/dave-perfect/">Dave Perfect</a></li>
-        <li><a href="/knowledge/">Knowledge base</a></li>
+        <li><a href="/knowledge/">Knowledge Base</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>
@@ -143,7 +143,7 @@ def build_knowledge():
 """
         out = ROOT / "knowledge" / a["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(shell(f"{a['title']} — Amárach Net Solutions",
+        out.write_text(shell(f"{a['title']} | Amárach Net Solutions",
                              a["summary"], body, "/knowledge/", depth=2))
 
     cards = "\n".join(f"""
@@ -170,7 +170,7 @@ def build_knowledge():
   </section>
 """
     (ROOT / "knowledge" / "index.html").write_text(
-        shell("Knowledge base — Amárach Net Solutions",
+        shell("Knowledge Base | Amárach Net Solutions",
               "Fixes, explanations, and answers to the questions Rockford-area businesses ask us most. Free to read, no login.",
               body, "/knowledge/"))
     return articles
@@ -189,8 +189,8 @@ SERVICES = [
       "Responsible disposal of the old unit",
       "Every machine delivered Dave Perfect"]),
     ("Vertical software integration",
-     "Practice management, imaging, ERP, and other field-specific systems — installed, updated, and made to work with the rest of your network.",
-     ["Installation and version upgrades", "Vendor coordination — we sit on hold so you don't have to",
+     "Practice management, imaging, ERP, and other field-specific systems: installed, updated, and made to work with the rest of your network.",
+     ["Installation and version upgrades", "Vendor coordination. We sit on hold so you don't have to",
       "Integration with your network, printers, and backups",
       "Dental, medical, professional, and industrial systems"]),
     ("Diagnosis and troubleshooting",
@@ -200,7 +200,7 @@ SERVICES = [
     ("Support, on-site and remote",
      "Routine help for staff, one-off emergencies, and standing arrangements. Think of the remote side as telemedicine for your network: most problems are diagnosed and fixed without anyone waiting for a visit.",
      ["Remote sessions for most issues, usually within the hour",
-      "On-site visits when it needs hands — the Rockford region and northern Illinois",
+      "On-site visits when it needs hands, across the Rockford region and northern Illinois",
       "Fully remote care of workstations and servers for clients beyond driving distance",
       "Standing maintenance arrangements for offices that would rather not think about it"]),
 ]
@@ -220,7 +220,7 @@ def build_services():
     <div class="wrap">
       <p class="meta kicker">Services</p>
       <h1>One firm, accountable, that has seen your problem before</h1>
-      <p class="lede">Amárach handles the whole stack a small business runs on — the network, the machines, and the software that's specific to your field — so there's one number to call and no vendor pointing at another vendor.</p>
+      <p class="lede">Amárach handles the whole stack a small business runs on: the network, the machines, and the software that's specific to your field. One number to call, and no vendor pointing at another vendor.</p>
     </div>
   </div>
   <section class="section" style="padding-top: calc(var(--section) * 0.4);">
@@ -230,24 +230,24 @@ def build_services():
   </section>
   <section class="section section--navy closing">
     <div class="wrap">
-      <p>Not sure which of these your problem is? That's fine — that's our job.</p>
+      <p>Not sure which of these your problem is? That's fine. That's our job.</p>
       <a class="phone-big" href="{TEL}">Call {PHONE}</a>
     </div>
   </section>
 """
     out = ROOT / "services" / "index.html"
     out.parent.mkdir(exist_ok=True)
-    out.write_text(shell("Services — Amárach Net Solutions",
+    out.write_text(shell("Services | Amárach Net Solutions",
                          "Network administration, equipment provisioning, vertical software, troubleshooting, and ongoing support for Rockford-area businesses.",
                          body, "/services/"))
 
 
 def build_dave_perfect():
     steps = [
-        "Inventory and baseline — what's installed, what's running, what's actually using the resources",
+        "Inventory and baseline: what's installed, what's running, what's actually using the resources",
         "Remove bundled trials, redundant utilities, and unnecessary startup items",
         "Correct system and registry settings for how the machine will really be used",
-        "Current drivers, firmware, and updates — then verified, not assumed",
+        "Current drivers, firmware, and updates, verified rather than assumed",
         "Security and backup confirmed working",
         "Files, settings, and profiles migrated if it's a replacement",
         "Line-of-business and vertical software installed and tested",
@@ -262,14 +262,14 @@ def build_dave_perfect():
         <h1>Dave Perfect</h1>
         <p class="lede">A named service, not a slogan. Coined in our own shop, named after our founder, and asked for by name by our clients.</p>
       </div>
-      <img class="dp-hero-seal" src="/brand/seal-green.svg" alt="Dave Perfect seal — Amárach Net Solutions" width="200" height="200">
+      <img class="dp-hero-seal" src="/brand/seal-green.svg" alt="Dave Perfect seal, Amárach Net Solutions" width="200" height="200">
     </div>
   </div>
   <section class="section" style="padding-top: calc(var(--section) * 0.3);">
     <div class="wrap">
       <div class="prose">
         <p>A new computer out of the box is not ready to work. It ships loaded with trial software, promotional apps, and startup items that run whether or not anyone wants them. An older machine has the same problem from the other direction: years of half-removed programs, browser add-ons, and background services that accumulated one install at a time.</p>
-        <p>Both feel slow for the same reason — <strong>the machine is busy doing things nobody asked for.</strong></p>
+        <p>Both feel slow for the same reason: <strong>the machine is busy doing things nobody asked for.</strong></p>
         <p>Dave Perfect is the setup and cleanup pass that fixes that. It's the standard every machine we deliver meets before it reaches your desk, and the treatment that brings an existing machine back.</p>
         <h2>What's in the pass</h2>
         <ol class="dp-steps">
@@ -289,8 +289,8 @@ def build_dave_perfect():
 """
     out = ROOT / "dave-perfect" / "index.html"
     out.parent.mkdir(exist_ok=True)
-    out.write_text(shell("Dave Perfect — the setup and cleanup pass | Amárach Net Solutions",
-                         "Dave Perfect is Amárach's signature setup and cleanup service: the pass that makes a machine faster, quieter, and calmer — on new equipment and old.",
+    out.write_text(shell("Dave Perfect | Amárach Net Solutions",
+                         "Dave Perfect is Amárach's signature setup and cleanup service: the pass that makes a machine faster, quieter, and calmer, on new equipment and old.",
                          body, "/dave-perfect/"))
 
 
@@ -316,7 +316,7 @@ def build_about():
         <p>Amárach Net Solutions was founded by David Lickteig in 1997, and has been serving Rockford-area businesses ever since. The model hasn't changed in twenty-nine years: senior-level work, direct relationships, and networks the firm knows well because it built them.</p>
         <p>Dave is a Microsoft Certified Professional. Before founding Amárach, he served as Assistant Network Administrator for the City of Rockford at the Rockford Public Library, and before computers, spent eleven years in industrial sales calling on manufacturers across Winnebago County. It's a useful background for explaining a server to someone who doesn't want to hear about a server. He studied at Iowa State University.</p>
         <h2>How we work</h2>
-        <p>Clients range from one-person shops to companies with more than a hundred employees — dental and medical offices, professional firms, manufacturers, nonprofits. Some have been with the firm for decades. Most are within an hour of Rockford; some are further out and work with us entirely remotely.</p>
+        <p>Clients range from one-person shops to companies with more than a hundred employees: dental and medical offices, professional firms, manufacturers, nonprofits. Some have been with the firm for decades. Most are within an hour of Rockford; some are further out and work with us entirely remotely.</p>
         <p>There's no ticket queue and no tier-one script. The person working on your network is the one who set it up, knows its history, and remembers what was done last time. That continuity is the product.</p>
         <p><a href="/contact/">Get in touch &rarr;</a></p>
       </div>
@@ -325,7 +325,7 @@ def build_about():
 """
     out = ROOT / "about" / "index.html"
     out.parent.mkdir(exist_ok=True)
-    out.write_text(shell("About — Amárach Net Solutions",
+    out.write_text(shell("About | Amárach Net Solutions",
                          "Amárach Net Solutions is an independent IT firm in Rockford, Illinois, founded by David Lickteig in 1997.",
                          body, "/about/"))
 
@@ -336,7 +336,7 @@ def build_contact():
     <div class="wrap">
       <p class="meta kicker">Contact</p>
       <h1>Talk to us</h1>
-      <p class="lede">The fastest way is the phone. If it's not urgent, the form works too — we'll get back to you within one business day.</p>
+      <p class="lede">The fastest way is the phone. If it's not urgent, the form works too, and we'll get back to you within one business day.</p>
     </div>
   </div>
   <section class="section" style="padding-top: calc(var(--section) * 0.3);">
@@ -345,7 +345,7 @@ def build_contact():
         <a class="contact-phone" href="{TEL}">{PHONE}</a>
         <ul class="contact-facts">
           <li><span class="meta">Email</span><a href="mailto:davidjp@amarach.net">davidjp@amarach.net</a></li>
-          <li><span class="meta">Service area</span>On-site across the Rockford region and northern Illinois. Remote support and managed care of computers and servers — anywhere.</li>
+          <li><span class="meta">Service area</span>On-site across the Rockford region and northern Illinois. Remote support and managed care of computers and servers, anywhere.</li>
           <li><span class="meta">Hours</span>[[HOURS]]</li>
         </ul>
       </div>
@@ -385,7 +385,7 @@ def build_contact():
 """
     out = ROOT / "contact" / "index.html"
     out.parent.mkdir(exist_ok=True)
-    out.write_text(shell("Contact — Amárach Net Solutions",
+    out.write_text(shell("Contact | Amárach Net Solutions",
                          "Call 815-636-8311 or send a message. IT support for Rockford-area businesses, on-site and remote.",
                          body, "/contact/"))
 
