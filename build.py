@@ -47,6 +47,10 @@ def shell(title, description, body, current, depth=1):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://taipan0319-byte.github.io/Amarach-Website/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/brand/icon-favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/css/tokens.css">
 <link rel="stylesheet" href="/css/site.css">

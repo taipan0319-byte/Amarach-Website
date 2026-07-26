@@ -388,3 +388,6 @@ input:focus, textarea:focus { outline: 2px solid var(--blue); outline-offset: 1p
 @media (max-width: 700px) {
   .site-header .logo svg, .site-header .logo img { height: 42px; }
 }
+
+/* closing band logo */
+.closing-logo { height: 140px; width: auto; margin-bottom: 32px; }
